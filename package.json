@@ -1,0 +1,30 @@
+{
+  "name": "among-us-roles",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "next dev",
+    "build": "next build",
+    "prepreview": "npm run build",
+    "preview": "next start"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "bulma": "^0.9.1",
+    "i18next": "^19.8.2",
+    "lodash": "^4.17.20",
+    "next": "^9.5.5",
+    "react": "^16.14.0",
+    "react-dom": "^16.14.0",
+    "sass": "^1.27.0"
+  },
+  "devDependencies": {
+    "@types/lodash": "^4.14.162",
+    "@types/node": "^14.11.10",
+    "@types/react": "^16.9.53",
+    "typescript": "^4.0.3"
+  }
+}
