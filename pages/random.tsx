@@ -48,7 +48,9 @@ InferGetServerSidePropsType<typeof getServerSideProps>) => {
 export const getServerSideProps: GetServerSideProps<{
   trait: string,
 }> = async () => {
-  const trait = sample(traits.map(({ id }) => id));
+  const trait = sample(
+    traits.filter(({ deprecated }) => !deprecated).map(({ id }) => id),
+  );
 
   return {
     props: {
