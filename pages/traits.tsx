@@ -7,10 +7,10 @@ const Traits = () => {
   return (
     <>
       <div className="section">
-        <div className="container is-max-desktop">
+        <div className="container is-max-widescreen">
           <div className="columns is-multiline">
             {traits.sort().map((role) => (
-              <div className="column is-4">
+              <div className="column is-12 is-6-desktop is-4-widescreen">
                 <div className="card" style={{ height: '100%' }}>
                   <div className="card-header">
                     <div className="card-header-title">
