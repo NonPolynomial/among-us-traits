@@ -9,8 +9,8 @@ const Index = () => {
       <div className="section">
         <div className="container box">
           <div className="content is-medium">
-            <div dangerouslySetInnerHTML={{ __html: t('content.why') }}></div>
-            <div dangerouslySetInnerHTML={{ __html: t('content.how') }}></div>
+            <div dangerouslySetInnerHTML={{ __html: t('content.why') }} />
+            <div dangerouslySetInnerHTML={{ __html: t('content.how') }} />
           </div>
           <div className="mt-6 has-text-centered">
             <Link href="/random">

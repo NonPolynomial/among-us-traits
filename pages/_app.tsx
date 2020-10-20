@@ -1,4 +1,3 @@
-// import 'bulma';
 import '@/style.scss';
 import { TranslationProvider } from '@components/Translation';
 

@@ -1,5 +1,4 @@
 import {
-  PropsWithChildren,
   useState,
   createContext,
   useContext,
@@ -13,13 +12,15 @@ import { traits } from '@/traits';
 
 export const LanguageContext = createContext('en');
 
-export const useTranslation = () => {
+export const useTranslation = (): ReturnType<typeof i18n.getFixedT> => {
   const lang = useContext(LanguageContext);
 
   return i18n.getFixedT(lang);
 };
 
-export const TranslationProvider = ({ children }: PropsWithChildren<{}>) => {
+export const TranslationProvider = ({
+  children,
+}) => {
   const [lang, setLang] = useState('en');
   const [translator, setTranslator] = useState(null);
   const router = useRouter();
@@ -125,13 +126,13 @@ export const TranslationProvider = ({ children }: PropsWithChildren<{}>) => {
           },
         },
       })
-      .then((t) => {
+      .then(() => {
         setTranslator(i18n);
-        i18n.on('languageChanged', (lng) => {
+        i18n.on('languageChanged', lng => {
           setLang(lng);
         });
       })
-      .catch((e) => {
+      .catch(e => {
         console.error(e);
       });
 
@@ -165,7 +166,6 @@ export const TranslationProvider = ({ children }: PropsWithChildren<{}>) => {
                 ))}
               </div>
               <div className="navbar-end">
-                {/* <div className="navbar-item"> */}
                 <a
                   className="navbar-item"
                   onClick={() => {
@@ -174,7 +174,6 @@ export const TranslationProvider = ({ children }: PropsWithChildren<{}>) => {
                 >
                   {t('changeLanguage')}
                 </a>
-                {/* </div> */}
               </div>
             </div>
           </div>

@@ -6,7 +6,8 @@ import { traits } from '@/traits';
 
 const Random = ({
   trait,
-}: InferGetServerSidePropsType<typeof getServerSideProps>) => {
+}: // eslint-disable-next-line no-use-before-define
+InferGetServerSidePropsType<typeof getServerSideProps>) => {
   const t = useTranslation();
 
   return (
@@ -45,9 +46,9 @@ const Random = ({
 };
 
 export const getServerSideProps: GetServerSideProps<{
-  trait: string;
+  trait: string,
 }> = async () => {
-  const trait = sample(traits.map(({id}) => id));
+  const trait = sample(traits.map(({ id }) => id));
 
   return {
     props: {
