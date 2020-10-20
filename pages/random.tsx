@@ -5,7 +5,7 @@ import { useTranslation } from '@/components/Translation';
 import { traits } from '@/traits';
 
 const Random = ({
-  role,
+  trait,
 }: InferGetServerSidePropsType<typeof getServerSideProps>) => {
   const t = useTranslation();
 
@@ -16,7 +16,7 @@ const Random = ({
           <div className="card">
             <div className="card-header">
               <div className="card-header-title">
-                <p className="title">{t(`roles:${role}.title`)}</p>
+                <p className="title">{t(`traits:${trait}.title`)}</p>
               </div>
             </div>
             <div className="card-content">
@@ -24,7 +24,7 @@ const Random = ({
                 <div
                   className="content is-medium"
                   dangerouslySetInnerHTML={{
-                    __html: t(`roles:${role}.description`),
+                    __html: t(`traits:${trait}.description`),
                   }}
                 />
               </div>
@@ -45,13 +45,13 @@ const Random = ({
 };
 
 export const getServerSideProps: GetServerSideProps<{
-  role: string;
+  trait: string;
 }> = async () => {
-  const role = sample(traits);
+  const trait = sample(traits.map(({id}) => id));
 
   return {
     props: {
-      role: role,
+      trait,
     },
   };
 };

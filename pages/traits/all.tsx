@@ -4,16 +4,36 @@ import { traits } from '@/traits';
 const Traits = () => {
   const t = useTranslation();
 
-  const filtered = traits.filter(({ deprecated }) => !deprecated).sort();
+  const allTraits = traits
+    .sort(
+      (
+        { id: idA, deprecated: aDeprecated },
+        { id: idB, deprecated: bDeprecated },
+      ) => {
+        if (aDeprecated && !bDeprecated) return 1;
+        if (!aDeprecated && bDeprecated) return -1;
+
+        if (idA < idB) return -1;
+        if (idA > idB) return 1;
+
+        return 0;
+      },
+    );
 
   return (
     <>
       <div className="section">
         <div className="container is-max-widescreen">
           <div className="columns is-multiline">
-            {filtered.map((trait) => (
+            {allTraits.map((trait) => (
               <div className="column is-12 is-6-desktop is-4-widescreen">
-                <div className="card" style={{ height: '100%' }}>
+                <div
+                  className={[
+                    'card',
+                    trait.deprecated ? 'has-background-grey-light' : '',
+                  ].join(' ')}
+                  style={{ height: '100%' }}
+                >
                   <div className="card-header">
                     <div className="card-header-title">
                       <p className="title">{t(`traits:${trait.id}.title`)}</p>
