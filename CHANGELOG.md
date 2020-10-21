@@ -7,6 +7,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.0.1] - 2020-10-21
+### FIXED
+- content of LICENSE file
+- uses `fs` instead of `fs/promises`
+
 ## [1.0.0] - 2020-10-21
 ### Added
 - Traits added with translation for English and German

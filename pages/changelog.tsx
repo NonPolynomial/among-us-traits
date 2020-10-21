@@ -1,5 +1,5 @@
-import { resolve } from 'path';
-import { readFile } from 'fs/promises';
+import path from 'path';
+import { readFile } from 'fs';
 import { GetStaticProps, InferGetStaticPropsType } from 'next';
 
 const Changelog = ({
@@ -20,8 +20,17 @@ InferGetStaticPropsType<typeof getStaticProps>) => {
 export const getStaticProps: GetStaticProps<{
   changelog: string,
 }> = async () => {
-  const changelog = await readFile(resolve(process.cwd(), 'CHANGELOG.md'), {
-    encoding: 'utf-8',
+  const changelog = await new Promise<string>((resolve, reject) => {
+    readFile(
+      path.resolve(process.cwd(), 'CHANGELOG.md'),
+      {
+        encoding: 'utf-8',
+      },
+      (err, data) => {
+        if (err) reject(err);
+        resolve(data);
+      },
+    );
   });
 
   return {
