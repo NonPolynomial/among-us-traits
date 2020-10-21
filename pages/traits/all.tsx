@@ -26,7 +26,7 @@ const Traits = () => {
         <div className="container is-max-widescreen">
           <div className="columns is-multiline">
             {allTraits.map((trait) => (
-              <div className="column is-12 is-6-desktop is-4-widescreen">
+              <div key={trait.id} className="column is-12 is-6-desktop is-4-widescreen">
                 <div
                   className={[
                     'card',

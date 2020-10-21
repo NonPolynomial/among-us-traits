@@ -8,11 +8,15 @@ const Index = () => {
     <>
       <div className="section">
         <div className="container box">
-          <div className="content is-medium">
-            <div dangerouslySetInnerHTML={{ __html: t('content.why') }} />
-            <div dangerouslySetInnerHTML={{ __html: t('content.how') }} />
-          </div>
-          <div className="mt-6 has-text-centered">
+          <div
+            className="content is-medium"
+            dangerouslySetInnerHTML={{ __html: t('content.why') }}
+          />
+          <div
+            className="content is-medium"
+            dangerouslySetInnerHTML={{ __html: t('content.how') }}
+          />
+          <div className="content has-text-centered">
             <Link href="/random">
               <button className="button is-dark is-medium">
                 {t('getTrait')}

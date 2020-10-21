@@ -14,6 +14,7 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.15.1",
     "bulma": "^0.9.1",
     "i18next": "^19.8.2",
     "lodash": "^4.17.20",

@@ -1,9 +1,4 @@
-import {
-  useState,
-  createContext,
-  useContext,
-  useEffect,
-} from 'react';
+import { useState, createContext, useContext, useEffect } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import i18n from 'i18next';
@@ -18,9 +13,7 @@ export const useTranslation = (): ReturnType<typeof i18n.getFixedT> => {
   return i18n.getFixedT(lang);
 };
 
-export const TranslationProvider = ({
-  children,
-}) => {
+export const TranslationProvider = ({ children }) => {
   const [lang, setLang] = useState('en');
   const [translator, setTranslator] = useState(null);
   const router = useRouter();
@@ -168,11 +161,21 @@ export const TranslationProvider = ({
               <div className="navbar-end">
                 <a
                   className="navbar-item"
+                  href="https://github.com/NonPolynomial/among-us-traits"
+                >
+                  <span className="icon">
+                    <i className="fab fa-github" />
+                  </span>
+                </a>
+                <a
+                  className="navbar-item"
                   onClick={() => {
                     i18n.changeLanguage(i18n.language !== 'en' ? 'en' : 'de');
                   }}
                 >
-                  {t('changeLanguage')}
+                  <span className="icon">
+                    <i className="fas fa-language" />
+                  </span>
                 </a>
               </div>
             </div>
@@ -185,7 +188,6 @@ export const TranslationProvider = ({
           </div>
         </div>
       </section>
-
       {children}
     </LanguageContext.Provider>
   );
