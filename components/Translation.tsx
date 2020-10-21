@@ -162,6 +162,7 @@ export const TranslationProvider = ({ children }) => {
                 <a
                   className="navbar-item"
                   href="https://github.com/NonPolynomial/among-us-traits"
+                  target="_new"
                 >
                   <span className="icon">
                     <i className="fab fa-github" />

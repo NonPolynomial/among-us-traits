@@ -5,4 +5,5 @@ export const routes = [
   },
   { href: '/traits', title: 'Traits' },
   { href: '/random', title: 'Random' },
+  { href: '/changelog', title: 'Changelog' },
 ];
