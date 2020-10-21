@@ -13,6 +13,7 @@ type Trait = {
 };
 
 export const traits: Trait[] = [
+  // ! Please add traits in alphabetical order !
   {
     id: 'amnesia',
     translations: {
