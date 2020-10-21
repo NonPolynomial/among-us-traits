@@ -8,7 +8,7 @@ type Trait = {
   deprecated?: boolean,
   translations: {
     en: Translation,
-    [key:string]: Translation,
+    [key: string]: Translation,
   },
 };
 
@@ -36,6 +36,23 @@ export const traits: Trait[] = [
     },
   },
   {
+    id: 'blindbat',
+    translations: {
+      en: {
+        title: 'Blind like a Bat',
+        description: `<p>
+          You're blind. You have a good sense of hearing, so you know where others are, but you can only identify others by touching them with your character-sprite.
+        </p>`,
+      },
+      de: {
+        title: 'Blind wie eine Fledermaus',
+        description: `<p>
+          Du bist blind. Du hast gutes Gehör, weißt also wo sich andere in deiner Nähe befinden, aber kannst sie nur identifizeren, wenn du sie mit deinem Charakter-Sprite berührst.
+        </p>`,
+      },
+    },
+  },
+  {
     id: 'blur',
     translations: {
       en: {
@@ -56,6 +73,83 @@ export const traits: Trait[] = [
           Du kannst keine Leichen, Crewmates oder venting Impostors.
           <br />
           Du machst nur deine Aufgaben - naja, du versuchst es zumindest.
+        </p>`,
+      },
+    },
+  },
+  {
+    id: 'button',
+    translations: {
+      en: {
+        title: 'Buzzer Lover',
+        description: `<p>
+          While you have your emergency meeting ready, you can only report a corpse by using the emergency meeting.
+        </p>`,
+      },
+      de: {
+        title: 'Buzzer Liebhaber',
+        description: `<p>
+          Solange dein Emergency Meeting noch unverbraucht ist, kannst du leichen nur damit melden.
+        </p>`,
+      },
+    },
+  },
+  {
+    id: 'cleaning-staff',
+    translations: {
+      en: {
+        title: 'Cleaning Staff',
+        description: `<p>
+          You have to clean the bloody mess someone else (or you) created...
+          If you find a corpse or the meeting reveals the position of one, head there right away and clean that mess. 
+          Stand next to the body (or area) for around 10 seconds, then either report it or run away, your choice.
+        </p>`,
+      },
+      de: {
+        title: 'Putzbeauftragter',
+        description: `<p>
+          Du musst die blutige Sauerrei die einer (oder du) verrichtet hat aufräumen...
+          Wenn du eine Leiche findest oder die Lage von einer herausfindest, geh dort direkt hin und putze den Mist auf. 
+          Stehe neben dem Körper für ca. 10 Sek., dann entweder Reporte sie oder renne weg, deine Entscheidung.
+        </p>`,
+      },
+    },
+  },
+  {
+    id: 'conspiracy',
+    translations: {
+      en: {
+        title: 'Conspiracy Theorist',
+        description: `<p>
+          The existence of vents is an idea that the government planted in our brains to control us.
+          You don't believe in Vents, arguments involving them can only convince you with difficulty, and if you see someone vent, you'll rationalize it as them having been there the whole time.
+          Every death is somehow connected in a bigger scheme, which you'll let others know when the game is over.
+        </p>`,
+      },
+      de: {
+        title: 'Von der alten Schule',
+        description: `<p>
+          Die Existenz von Lüftungsschächten ist eine Idee, die die Regierung in unseren Gehirnen gepflanzt hat um uns zu kontrollieren.
+          Du glaubst nicht an Lüftungsschächte, Argumente die sie beinhalten können dich nur schwer überzeugen und wenn du jemand im Lüftungtsschacht siehst, 
+          denkst du, dass er schon die ganze Zeit im raum war.
+          Jeder Tod ist Teil eines größeren Schemas, welches du den anderen nach dem Match erklärst.
+        </p>`,
+      },
+    },
+  },
+  {
+    id: 'curious',
+    translations: {
+      en: {
+        title: 'Curious',
+        description: `<p>
+          You are fascinated by vents. Whenever one comes into your vision radius, you need to check it out by standing on top of it shortly before moving on.
+        </p>`,
+      },
+      de: {
+        title: 'Neugierig',
+        description: `<p>
+          Lüftungsschächte faszinieren dich. Immer wenn du einen im Sichtradius hast, musst du ihn genauer untersuchen, indem du dich kurz drauf stells bevor du weitermachst.
         </p>`,
       },
     },
@@ -193,6 +287,44 @@ export const traits: Trait[] = [
         </p>
         <p>
           Imposter haben keine Angst im Dunkeln!
+        </p>`,
+      },
+    },
+  },
+  {
+    id: 'gluttony',
+    translations: {
+      en: {
+        title: 'Gluttony',
+        description: `<p>
+          After you finish all the tasks or kill a crewmate in one room, you are going to the meeting room to pick up a snack.
+          Don't do any tasks on the way to the cafeteria - because... you know... you need that snack!
+        </p>`,
+      },
+      de: {
+        title: 'Völlerei',
+        description: `<p>
+          Nachdem du alle Aufgaben in einem Raum oder einen Crewmate erledigt hast, musst du in den Meeting-Raum gehen und dir einen Snack holen.
+          Auf dem Weg zur Cafeteria darfst du keinen Task erledigen - weil... naja... du brauchst diesen Snack!
+        </p>`,
+      },
+    },
+  },
+  {
+    id: 'janitor',
+    translations: {
+      en: {
+        title: 'Janitor',
+        description: `<p>
+          You keep the operation in order. You check Electrical, Oxygen and Cafeteria often, there might be a fuse lose or something else wrong.
+          If something is wrong with those, you fix them, IMMEDIATELY (even if it disrupts your current task!
+        </p>`,
+      },
+      de: {
+        title: 'Hausmeister',
+        description: `<p>
+          Du schaust das alles läuft. Du kontrollierst Electrical, Oxygen und Cafeteria öfters mal, es könnte eine Sicherung lose sein oder etwas anders!
+          Wenn etwas mit diesen Dingen falsch läuft, du reparierst diese, SOFORT (auch wenn es deinen aktuellen Task unterbricht)!
         </p>`,
       },
     },
@@ -356,6 +488,47 @@ export const traits: Trait[] = [
     },
   },
   {
+    id: 'nurse',
+    translations: {
+      en: {
+        title: 'Nurse',
+        description: `<p>
+          It is your sworn duty to check up on medbay, there might be a patient.
+          Go to medbay regularly to check up on things.
+        </p>`,
+      },
+      de: {
+        title: 'Krankenschwester',
+        description: `<p>
+          Es ist deine geschworene Aufgabe Medbay zu checken, es könnte einen Patienten geben. Gehe öfter mal zu Medbay um die Dinge abzuchecken.
+        </p>`,
+      },
+    },
+  },
+  {
+    id: 'oldschool',
+    translations: {
+      en: {
+        title: 'Oldschool',
+        description: `<p>
+          Back in your day, you had no fancy map device. No need to use it now.
+          You cannot open your Task-Map (sabotage is fine)
+          <br />
+          <b>However, the other crewmates can convince you otherwise with sound logic.</b>
+        </p>`,
+      },
+      de: {
+        title: 'Von der alten Schule',
+        description: `<p>
+          Du stimmst allem zu, egal was es ist.
+          <br />
+          <b>Allerdings kannst du von anderen Crewmates überzeugt werden, wenn sie Logik
+          anwenden.</b>,
+        </p>`,
+      },
+    },
+  },
+  {
     id: 'paranoia',
     translations: {
       en: {
@@ -393,6 +566,25 @@ export const traits: Trait[] = [
         title: 'Poltergeist',
         description: `<p>
           Wenn du stirbst, unterbrichst du hin und wieder das Meeting mit sarkastischen Kommentaren und Spott - nicht übertreiben!
+        </p>`,
+      },
+    },
+  },
+  {
+    id: 'pride',
+    translations: {
+      en: {
+        title: 'Pride',
+        description: `<p>
+          You're proud of your work!
+          In a meeting, you always feel the need to share what (fake-) tasks you did this round, no matter if asked or not.
+        </p>`,
+      },
+      de: {
+        title: 'Von der alten Schule',
+        description: `<p>
+          Du bist stolz auf deine Arbeit!
+          Während einem Meeting willst du immer den anderen mitteilen, was für (fake-)Tasks du diese Runde gemacht hast, egal ob gefragt oder nicht.
         </p>`,
       },
     },
@@ -495,6 +687,24 @@ export const traits: Trait[] = [
     },
   },
   {
+    id: 'sherlock',
+    translations: {
+      en: {
+        title: 'Sherlock',
+        description: `<p>
+          Always remember the last person you saw. Ask them where they were when the body was found (even if they were right next to you and you don't ask dead people).
+        </p>`,
+      },
+      de: {
+        title: 'Sherlock',
+        description: `<p>
+          Merke dir immer die letzte Person die du getroffen hast. 
+          Frag sie, wo sie waren als die Leiche gefunden wurde (auch wenn sie direkt neben dir standen und du fragst keine Toten).
+        </p>`,
+      },
+    },
+  },
+  {
     id: 'true-poet',
     translations: {
       en: {
@@ -561,229 +771,6 @@ export const traits: Trait[] = [
           <br />
           Allerdings kannst du von anderen Crewmates überzeugt werden, wenn sie Logik
           anwenden.
-        </p>`,
-         },
-      },
-    },
-    {
-    id: 'oldschool',
-    translations: {
-      en: {
-        title: 'Oldschool',
-        description: `<p>
-          Back in your day, you had no fancy map device. No need to use it now.
-          You cannot open your Task-Map (sabotage is fine)
-          <br />
-          <b>However, the other crewmates can convince you otherwise with sound logic.</b>
-        </p>`,
-      },
-      de: {
-        title: 'Von der alten Schule',
-        description: `<p>
-          Du stimmst allem zu, egal was es ist.
-          <br />
-          <b>Allerdings kannst du von anderen Crewmates überzeugt werden, wenn sie Logik
-          anwenden.</b>,
-        </p>`,
-          },
-        },
-      },
-  
-    id: 'conspiracy',
-    translations: {
-      en: {
-        title: 'Conspiracy Theorist',
-        description: `<p>
-          The existence of vents is an idea that the government planted in our brains to control us.
-          You don't believe in Vents, arguments involving them can only convince you with difficulty, and if you see someone vent, you'll rationalize it as them having been there the whole time.
-          Every death is somehow connected in a bigger scheme, which you'll let others know when the game is over.  ,
-      },
-      de: {
-        title: 'Von der alten Schule',
-        description: `<p>
-          Die Existenz von Lüftungsschächten ist eine Idee, die die Regierung in unseren Gehirnen gepflanzt hat um uns zu kontrollieren.
-          Du glaubst nicht an Lüftungsschächte, Argumente die sie beinhalten können dich nur schwer überzeugen und wenn du jemand im Lüftungtsschacht siehst, 
-          denkst du, dass er schon die ganze Zeit im raum war.
-          Jeder Tod ist Teil eines größeren Schemas, welches du den anderen nach dem Match erklärst.
-        </p>`,
-        },
-      },
-    },
-  {
-  id: 'pride',
-    translations: {
-      en: {
-        title: 'Pride',
-        description: `<p>
-          You're proud of your work!
-          In a meeting, you always feel the need to share what (fake-) tasks you did this round, no matter if asked or not.
-        </p>`,
-      },
-      de: {
-        title: 'Von der alten Schule',
-        description: `<p>
-          Du bist stolz auf deine Arbeit!
-          Während einem Meeting willst du immer den anderen mitteilen, was für (fake-)Tasks du diese Runde gemacht hast, egal ob gefragt oder nicht.
-        </p>`,
-          },
-        },
-      },
-  {
-    id: 'button',
-    translations: {
-      en: {
-        title: 'Buzzer Lover',
-        description: `<p>
-          While you have your emergency meeting ready, you can only report a corpse by using the emergency meeting.
-      },
-      de: {
-        title: 'Buzzer Liebhaber',
-        description: `<p>
-          Solange dein Emergency Meeting  noch unverbraucht ist, kannst du leichen nur damit melden.
-        </p>`,
-      },
-    },
-  },
-  {
-    id: 'button',
-    translations: {
-      en: {
-        title: 'Buzzer Lover',
-        description: `<p>
-          While you have your emergency meeting ready, you can only report a corpse by using the emergency meeting.
-      },
-      de: {
-        title: 'Buzzer Liebhaber',
-        description: `<p>
-          Solange dein Emergency Meeting  noch unverbraucht ist, kannst du leichen nur damit melden.
-        </p>`,
-      },
-    },
-  },
-  {
-    id: 'gluttony',
-    translations: {
-      en: {
-        title: 'Gluttony',
-        description: `<p>
-          After you finish all the tasks or kill a crewmate in one room, you are going to the meeting room to pick up a snack.
-          Don't do any tasks on the way to the cafeteria - because... you know... you need that snack!
-      },
-      de: {
-        title: 'Völlerei',
-        description: `<p>
-          Nachdem du alle Aufgaben in einem Raum oder einen Crewmate erledigt hast, musst du in den Meeting-Raum gehen und dir einen Snack holen.
-          Auf dem Weg zur Cafeteria darfst du keinen Task erledigen - weil... naja... du brauchst diesen Snack!
-        </p>`,
-      },
-    },
-  },
-  {
-    id: 'blindbat',
-    translations: {
-      en: {
-        title: 'Blind like a Bat',
-        description: `<p>
-          You're blind. You have a good sense of hearing, so you know where others are, but you can only identify others by touching them with your character-sprite.
-      },
-      de: {
-        title: 'Blind wie eine Fledermaus',
-        description: `<p>
-          Du bist blind. Du hast gutes Gehör, weißt also wo sich andere in deiner Nähe befinden, aber kannst sie nur identifizeren, wenn du sie mit deinem Charakter-Sprite berührst.
-        </p>`,
-      },
-    },
-  },
-  {
-    id: 'janitor',
-    translations: {
-      en: {
-        title: 'Janitor',
-        description: `<p>
-          You keep the operation in order. You check Electrical, Oxygen and Cafeteria often, there might be a fuse lose or something else wrong.
-          If something is wrong with those, you fix them, IMMEDIATELY (even if it disrupts your current task)!
-
-      },
-      de: {
-        title: 'Hausmeister',
-        description: `<p>
-          Du schaust das alles läuft. Du kontrollierst Electrical, Oxygen und Cafeteria öfters mal, es könnte eine Sicherung lose sein oder etwas anders!
-          Wenn etwas mit diesen Dingen falsch läuft, du reparierst diese, SOFORT (auch wenn es deinen aktuellen Task unterbricht)!
-        </p>`,
-      },
-    },
-  },
-  {
-    id: 'Cleaning Staff',
-    translations: {
-      en: {
-        title: 'Cleaning Staff',
-        description: `<p>
-          You have to clean the bloody mess someone else (or you) created...
-          If you find a corpse or the meeting reveals the position of one, head there right away and clean that mess. 
-          Stand next to the body (or area) for around 10 seconds, then either report it or run away, your choice.
-        </p>
-      },
-      de: {
-        title: 'Putzbeauftragter',
-        description: `<p>
-          Du musst die blutige Sauerrei die einer (oder du) verrichtet hat aufräumen...
-          Wenn du eine Leiche findest oder die Lage von einer herausfindest, geh dort direkt hin und putze den Mist auf. 
-          Stehe neben dem Körper für ca. 10 Sek., dann entweder Reporte sie oder renne weg, deine Entscheidung.
-        </p>`,
-      },
-    },
-  },
-  {
-    id: 'sherlock',
-    translations: {
-      en: {
-        title: 'Sherlock',
-        description: `<p>
-          Always remember the last person you saw. Ask them where they were when the body was found (even if they were right next to you and you don't ask dead people).
-        </p>
-      },
-      de: {
-        title: 'Sherlock',
-        description: `<p>
-          Merke dir immer die letzte Person die du getroffen hast. 
-          Frag sie, wo sie waren als die Leiche gefunden wurde (auch wenn sie direkt neben dir standen und du fragst keine Toten).
-        </p>`,
-      },
-    },
-  },
-  {
-    id: 'nurse',
-    translations: {
-      en: {
-        title: 'Nurse',
-        description: `<p>
-          It is your sworn duty to check up on medbay, there might be a patient.
-          Go to medbay regularly to check up on things.
-        </p>
-      },
-      de: {
-        title: 'Krankenschwester',
-        description: `<p>
-          Es ist deine geschworene Aufgabe Medbay zu checken, es könnte einen Patienten geben. Gehe öfter mal zu Medbay um die Dinge abzuchecken.
-        </p>`,
-      },
-    },
-  },
-  
- {
-    id: 'curious',
-    translations: {
-      en: {
-        title: 'Curious',
-        description: `<p>
-          You are fascinated by vents. Whenever one comes into your vision radius, you need to check it out by standing on top of it shortly before moving on.
-        </p>
-      },
-      de: {
-        title: 'Neugierig',
-        description: `<p>
-          Lüftungsschächte faszinieren dich. Immer wenn du einen im Sichtradius hast, musst du ihn genauer untersuchen, indem du dich kurz drauf stells bevor du weitermachst.
         </p>`,
       },
     },
