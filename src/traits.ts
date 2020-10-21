@@ -101,7 +101,9 @@ export const traits: Trait[] = [
         title: 'Cleaning Staff',
         description: `<p>
           You have to clean the bloody mess someone else (or you) created...
-          If you find a corpse or the meeting reveals the position of one, head there right away and clean that mess. 
+          <br />
+          If you find a corpse or the meeting reveals the position of one, head there right away and clean that mess.
+          <br />
           Stand next to the body (or area) for around 10 seconds, then either report it or run away, your choice.
         </p>`,
       },
@@ -109,7 +111,9 @@ export const traits: Trait[] = [
         title: 'Putzbeauftragter',
         description: `<p>
           Du musst die blutige Sauerrei die einer (oder du) verrichtet hat aufräumen...
-          Wenn du eine Leiche findest oder die Lage von einer herausfindest, geh dort direkt hin und putze den Mist auf. 
+          <br />
+          Wenn du eine Leiche findest oder die Lage von einer herausfindest, geh dort direkt hin und putze den Mist auf.
+          <br />
           Stehe neben dem Körper für ca. 10 Sek., dann entweder Reporte sie oder renne weg, deine Entscheidung.
         </p>`,
       },
@@ -121,17 +125,30 @@ export const traits: Trait[] = [
       en: {
         title: 'Conspiracy Theorist',
         description: `<p>
+          You don't believe in Vents.
+          <br />
           The existence of vents is an idea that the government planted in our brains to control us.
-          You don't believe in Vents, arguments involving them can only convince you with difficulty, and if you see someone vent, you'll rationalize it as them having been there the whole time.
+        </p>
+        <p>
+          Arguments involving them can only convince you with difficulty.
+          <br />
+          If you see someone vent, you'll rationalize it as them having been there the whole time.
+          <br />
           Every death is somehow connected in a bigger scheme, which you'll let others know when the game is over.
         </p>`,
       },
       de: {
-        title: 'Von der alten Schule',
+        title: 'Verschörungs-Theoretiker',
         description: `<p>
+          Du glaubst nicht an Lüftungsschächte.
+          <br />
           Die Existenz von Lüftungsschächten ist eine Idee, die die Regierung in unseren Gehirnen gepflanzt hat um uns zu kontrollieren.
-          Du glaubst nicht an Lüftungsschächte, Argumente die sie beinhalten können dich nur schwer überzeugen und wenn du jemand im Lüftungtsschacht siehst, 
-          denkst du, dass er schon die ganze Zeit im raum war.
+        </p>
+        <p>
+          Argumente die sie beinhalten können dich nur schwer überzeugen.
+          <br />
+          Wenn du jemand im Lüftungtsschacht siehst, denkst du, dass er schon die ganze Zeit im raum war.
+          <br />
           Jeder Tod ist Teil eines größeren Schemas, welches du den anderen nach dem Match erklärst.
         </p>`,
       },
@@ -143,13 +160,17 @@ export const traits: Trait[] = [
       en: {
         title: 'Curious',
         description: `<p>
-          You are fascinated by vents. Whenever one comes into your vision radius, you need to check it out by standing on top of it shortly before moving on.
+          You are fascinated by vents.
+          <br/>
+          Whenever one comes into your vision radius, you need to check it out by standing on top of it shortly before moving on.
         </p>`,
       },
       de: {
         title: 'Neugierig',
         description: `<p>
-          Lüftungsschächte faszinieren dich. Immer wenn du einen im Sichtradius hast, musst du ihn genauer untersuchen, indem du dich kurz drauf stells bevor du weitermachst.
+          Lüftungsschächte faszinieren dich.
+          <br />
+          Immer wenn du einen im Sichtradius hast, musst du ihn genauer untersuchen, indem du dich kurz drauf stells bevor du weitermachst.
         </p>`,
       },
     },
@@ -298,6 +319,7 @@ export const traits: Trait[] = [
         title: 'Gluttony',
         description: `<p>
           After you finish all the tasks or kill a crewmate in one room, you are going to the meeting room to pick up a snack.
+          <br />
           Don't do any tasks on the way to the cafeteria - because... you know... you need that snack!
         </p>`,
       },
@@ -305,6 +327,7 @@ export const traits: Trait[] = [
         title: 'Völlerei',
         description: `<p>
           Nachdem du alle Aufgaben in einem Raum oder einen Crewmate erledigt hast, musst du in den Meeting-Raum gehen und dir einen Snack holen.
+          <br />
           Auf dem Weg zur Cafeteria darfst du keinen Task erledigen - weil... naja... du brauchst diesen Snack!
         </p>`,
       },
@@ -317,6 +340,7 @@ export const traits: Trait[] = [
         title: 'Janitor',
         description: `<p>
           You keep the operation in order. You check Electrical, Oxygen and Cafeteria often, there might be a fuse lose or something else wrong.
+          <br />
           If something is wrong with those, you fix them, IMMEDIATELY (even if it disrupts your current task!
         </p>`,
       },
@@ -324,6 +348,7 @@ export const traits: Trait[] = [
         title: 'Hausmeister',
         description: `<p>
           Du schaust das alles läuft. Du kontrollierst Electrical, Oxygen und Cafeteria öfters mal, es könnte eine Sicherung lose sein oder etwas anders!
+          <br />
           Wenn etwas mit diesen Dingen falsch läuft, du reparierst diese, SOFORT (auch wenn es deinen aktuellen Task unterbricht)!
         </p>`,
       },
@@ -511,19 +536,23 @@ export const traits: Trait[] = [
       en: {
         title: 'Oldschool',
         description: `<p>
-          Back in your day, you had no fancy map device. No need to use it now.
-          You cannot open your Task-Map (sabotage is fine)
+          Back in your day, you had no fancy map device.
           <br />
-          <b>However, the other crewmates can convince you otherwise with sound logic.</b>
+          No need to use it now.
+        </p>
+        <p>
+          You cannot open your Task-Map (sabotage is fine).
         </p>`,
       },
       de: {
         title: 'Von der alten Schule',
         description: `<p>
-          Du stimmst allem zu, egal was es ist.
+          Zu deiner Zeit gab es noch keine digitale Schiffskarte.
           <br />
-          <b>Allerdings kannst du von anderen Crewmates überzeugt werden, wenn sie Logik
-          anwenden.</b>,
+          Du brauchst sie jetzt auch nicht.
+        </p>
+        <p>
+          Du kannst deine Task-Map nicht öffnen (Sabotage ist ok).
         </p>`,
       },
     },
@@ -577,14 +606,26 @@ export const traits: Trait[] = [
         title: 'Pride',
         description: `<p>
           You're proud of your work!
-          In a meeting, you always feel the need to share what (fake-) tasks you did this round, no matter if asked or not.
+          <br />
+          In a meeting, you always feel the need to share what tasks you did this round,
+          <br />
+          no matter if asked or not.
+        </p>
+        <p>
+          As Impostor you have to fake, that you have finished tasks.
         </p>`,
       },
       de: {
-        title: 'Von der alten Schule',
+        title: 'Stolz',
         description: `<p>
           Du bist stolz auf deine Arbeit!
-          Während einem Meeting willst du immer den anderen mitteilen, was für (fake-)Tasks du diese Runde gemacht hast, egal ob gefragt oder nicht.
+          <br />
+          Während einem Meeting willst du immer den anderen mitteilen, was für Tasks du diese Runde gemacht hast,
+          <br />
+          egal ob gefragt oder nicht.
+        </p>
+        <p>
+          Als Impostor musst du natürlich vortäuschen, du hättest Tasks erledigt.
         </p>`,
       },
     },
@@ -692,14 +733,23 @@ export const traits: Trait[] = [
       en: {
         title: 'Sherlock',
         description: `<p>
-          Always remember the last person you saw. Ask them where they were when the body was found (even if they were right next to you and you don't ask dead people).
+          Always remember the last person you saw.
+          <br />
+          Ask them where they were when the body was found (even if they were right next to you and you don't ask dead people).
+        </p>
+        <p>
+          Additionally, you have to talk with an imaginary Watson.
         </p>`,
       },
       de: {
         title: 'Sherlock',
         description: `<p>
-          Merke dir immer die letzte Person die du getroffen hast. 
+          Merke dir immer die letzte Person die du getroffen hast.
+          <br />
           Frag sie, wo sie waren als die Leiche gefunden wurde (auch wenn sie direkt neben dir standen und du fragst keine Toten).
+        </p>
+        <p>
+          Zusätzlich musst du mit einem imaginären Watson sprechen.
         </p>`,
       },
     },
