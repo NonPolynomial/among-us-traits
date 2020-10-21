@@ -7,6 +7,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 ### Added
+- new traits 🎉
+  - diplomacy
+  - envy
+  - easily shocked
+  - lust
+  - maintenance
+  - Nope!
+  - Poltergeist
+  - reflection
+  - true poet
+  - walky-talky
+  - YAS!
 - `Route` type
 - site / page title
 

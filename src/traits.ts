@@ -1,12 +1,15 @@
+type Translation = {
+  title: string,
+  description: string,
+};
+
 type Trait = {
-  id: string;
-  deprecated?: boolean;
+  id: string,
+  deprecated?: boolean,
   translations: {
-    [key: string]: {
-      title: string;
-      description: string;
-    };
-  };
+    en: Translation,
+    [key:string]: Translation,
+  },
 };
 
 export const traits: Trait[] = [
@@ -88,6 +91,25 @@ export const traits: Trait[] = [
     },
   },
   {
+    id: 'diplomacy',
+    translations: {
+      en: {
+        title: 'Diplomacy',
+        description: `<p>
+          If multiple people blame each other, you try to solve the conflict with
+          diplomacy instead of voting them both out.
+        </p>`,
+      },
+      de: {
+        title: 'Diplomatie',
+        description: `<p>
+          Wenn sich mehrere Personen gegenseit anschuldigen, versuchst du ihren streit
+          diplomatisch zu lösen anstatt beide rauszuvoten.
+        </p>`,
+      },
+    },
+  },
+  {
     id: 'dystychiphobia',
     translations: {
       en: {
@@ -123,6 +145,58 @@ export const traits: Trait[] = [
     },
   },
   {
+    id: 'envy',
+    translations: {
+      en: {
+        title: 'Envy',
+        description: `<p>
+          If a body is reported, you really dislike the one who reported it (unless it
+          was you).
+        </p>
+        <p>He is very suspicious to you in this meeting.</p>`,
+      },
+      de: {
+        title: 'Eifersucht',
+        description: `<p>
+          Wenn eine Leiche (von jemand anderem als dir) gemeldet wird, bist du neidisch
+          auf ihn, denn du hättest ihn gerne selbst gemeldet.
+        </p>
+        <p>Er ist dir sehr verdächtig in diesem Meeting.</p>`,
+      },
+    },
+  },
+  {
+    id: 'easily shocked',
+    translations: {
+      en: {
+        title: 'Easily Shocked',
+        description: `<p>
+          If you see a corpse or when the lights go out,
+          <br />
+          you need to wait ca. 10 seconds to gather your bravery
+          <br />
+          before you can continue to move or report the body.
+        </p>
+        <p>
+          As Impostor, you don't fear the dark.
+        </p>`,
+      },
+      de: {
+        title: 'Leicht zu schocken',
+        description: `<p>
+          Wenn du eine Leiche siehst oder das Licht ausgeht,
+          <br />
+          musst du ca. 10 sekunden deinen Mut zusammennehmen,
+          <br />
+          bevor du weitermachen oder die Leiche melden kannst.
+        </p>
+        <p>
+          Imposter haben keine Angst im Dunkeln!
+        </p>`,
+      },
+    },
+  },
+  {
     id: 'liar',
     translations: {
       en: {
@@ -143,6 +217,68 @@ export const traits: Trait[] = [
           Wenn du nach deinen Standorten, Aufgaben oder anderen Crewmates gefragt wirst - du lügst.
           <br />
           Wenn du für jemanden bürgen könntest, tust du es einfach nicht.
+        </p>`,
+      },
+    },
+  },
+  {
+    id: 'lust',
+    translations: {
+      en: {
+        title: 'Lust',
+        description: `<p>
+          Look for a partner in the beginning, this is your lover,
+          <br />
+          you follow him/her FOREVER and EVERYWHERE.
+        </p>
+        <p>If your lover dies you seek a new one.</p>`,
+      },
+      de: {
+        title: 'Lust',
+        description: `<p>
+          Schaue nach einem Partner am Anfang, das ist dein Geliebter,
+          <br />
+          du folgst ihm/ihr für IMMER und ÜBERALL hin.
+        </p>
+        <p>Wenn dein Geliebter stirbt, suchst du einen neuen.</p>`,
+      },
+    },
+  },
+  {
+    id: 'maintenance',
+    translations: {
+      en: {
+        title: 'Maintenance Team',
+        description: `<p>
+          "Change the lightbulb", "The Wifi is down, fix it", "Oh no the reactor is
+          melting!" and "Help me I am suffocating!" - is most of what you hear all
+          day...
+          <br />
+          You have to walk between Electrical, Comms, Reactor and Oxygen, so nobody
+          complains that often.
+        </p>
+        <p>
+          You are allowed to finish tasks only on the way.
+          <br />
+          Tasks which can't finished on the way, can be finished while walking on quick
+          patrols.
+        </p>`,
+      },
+      de: {
+        title: 'Wartungsteam',
+        description: `<p>
+          "Tausch die Glühbirne aus", "Eh, das Wlan spackt wieder", "Oh nein der Reaktor
+          schmilzt" und "Hilfe ich ersticke!" - ist das was du den ganzen Tag zu hören
+          bekommst...
+          <br />
+          Du musst zwischen Electrical, Comms, Reactor und Oxygen hin und her laufen,
+          damit nicht alle rumnörgeln.
+        </p>
+        <p>
+          Du darfst Aufgaben nur auf dem Weg erledigen.
+          <br />
+          Aufgaben, die unterwegs nicht erledigt werden können, können auf schnellen
+          Patrouillen unterwegs erledigt werden.
         </p>`,
       },
     },
@@ -180,6 +316,28 @@ export const traits: Trait[] = [
       de: {
         title: 'No Colors',
         description: `<p>Du kannst keine Farben erkennen oder Informationen, die Farben betreffen weitergeben.</p>`,
+      },
+    },
+  },
+  {
+    id: 'nope',
+    translations: {
+      en: {
+        title: 'Nope!',
+        description: `<p>
+          You disagree with everything said, no matter what.
+          <br />
+          However, the other crewmates can convince you otherwise with sound logic.
+        </p>`,
+      },
+      de: {
+        title: 'Nope!',
+        description: `<p>
+          Du lehnst alles zunächst ab, egal was es ist.
+          <br />
+          Allerdings kannst du von den anderen Crewmates überzeugt werden, wenn sie
+          Logik anwenden.
+        </p>`,
       },
     },
   },
@@ -222,6 +380,23 @@ export const traits: Trait[] = [
     },
   },
   {
+    id: 'poltergeist',
+    translations: {
+      en: {
+        title: 'Poltergeist',
+        description: `<p>
+          If you die, you sometimes disrupt the emergency meeting with sarcastic comments and mockery - don't overdo it!
+        </p>`,
+      },
+      de: {
+        title: 'Poltergeist',
+        description: `<p>
+          Wenn du stirbst, unterbrichst du hin und wieder das Meeting mit sarkastischen Kommentaren und Spott - nicht übertreiben!
+        </p>`,
+      },
+    },
+  },
+  {
     id: 'prosopagnosia',
     deprecated: true,
     translations: {
@@ -232,6 +407,37 @@ export const traits: Trait[] = [
       de: {
         title: 'Prosopagnosia',
         description: `<p>Du bist gesichtsblind und kannst keine Informationen über Namen an andere Besatzungsmitglieder weitergeben.</p>`,
+      },
+    },
+  },
+  {
+    id: 'reflection',
+    translations: {
+      en: {
+        title: 'Reflection',
+        description: `<p>
+          Split the map vertically in its center and pick the first crewmate you see at the start of the game or after a meeting.
+          <br />
+          This crewmate is your "reflection".
+        </p>
+        <p>
+          Whenever you see your Reflection on your part of the map,
+          <br />
+          you need to go to the other side.
+        </p>`,
+      },
+      de: {
+        title: 'Reflektion',
+        description: `<p>
+          Teile die Map vertikal in der mitte und wähle den Crewmate, den du bei Spielbeginn oder nach einem Meeting siehst.
+          <br />
+          Dieser Crewmate ist deine "Reflektion".
+        </p>
+        <p>
+          Wann immer du deine Reflektion auf deiner Seite der Map triffst,
+          <br />
+          musst du die Seite wechseln.
+        </p>`,
       },
     },
   },
@@ -280,10 +486,36 @@ export const traits: Trait[] = [
           Du musst von einer Sicherheitsstation zur anderen laufen (z.B. Sicherheit, Admin).
         </p>
         <p>
-          Sie dürfen Aufgaben nur auf dem Weg erledigen.
+          Du darfst Aufgaben nur auf dem Weg erledigen.
           <br />
           Aufgaben, die unterwegs nicht erledigt werden können, können auf schnellen Patrouillen unterwegs erledigt werden.
         </p>`,
+      },
+    },
+  },
+  {
+    id: 'true-poet',
+    translations: {
+      en: {
+        title: 'True Poet',
+        description: `<p>If possible, your sentences should rhyme.</p>`,
+      },
+      de: {
+        title: 'Wahrer Dichter',
+        description: `<p>Reime deine Sätze wenn möglich.</p>`,
+      },
+    },
+  },
+  {
+    id: 'walky-talky',
+    translations: {
+      en: {
+        title: 'Walky-talky',
+        description: `<p>End every sentence with "over".</p>`,
+      },
+      de: {
+        title: 'Walky-Talky',
+        description: `<p>Beende jeden Satz mit "over".</p>`,
       },
     },
   },
@@ -306,6 +538,28 @@ export const traits: Trait[] = [
           <br />
           Du ignorierst Leichen, andere Mitspieler und Sabotagen,
           außer es stört dich beim Erledigen deiner Tasks, z.B. disabled communications.
+        </p>`,
+      },
+    },
+  },
+  {
+    id: 'yes',
+    translations: {
+      en: {
+        title: 'YAS!',
+        description: `<p>
+          You agree with everything said, no matter what.
+          <br />
+          However, the other crewmates can convince you otherwise with sound logic.
+        </p>`,
+      },
+      de: {
+        title: 'YAS!',
+        description: `<p>
+          Du stimmst allem zu, egal was es ist.
+          <br />
+          Allerdings kannst du von anderen Crewmates überzeugt werden, wenn sie Logik
+          anwenden.
         </p>`,
       },
     },
