@@ -1,5 +1,5 @@
-import { useTranslation } from '@/components/Translation';
 import { traits } from '@/traits';
+import { useTranslation } from '@/translation/useTranslation';
 
 const Traits = () => {
   const t = useTranslation();

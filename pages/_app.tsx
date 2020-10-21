@@ -1,10 +1,10 @@
 import '@/style.scss';
-import { TranslationProvider } from '@components/Translation';
+import { AppProvider } from '@/components/AppProvider';
 
 const App = ({ Component, pageProps }) => (
-  <TranslationProvider>
+  <AppProvider>
     <Component {...pageProps} />
-  </TranslationProvider>
+  </AppProvider>
 );
 
 export default App;

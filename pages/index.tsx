@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { useTranslation } from '@/components/Translation';
+import { useTranslation } from '@/translation/useTranslation';
 
 const Index = () => {
   const t = useTranslation();

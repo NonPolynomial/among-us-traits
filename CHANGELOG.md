@@ -6,9 +6,21 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+### Added
+- `Route` type
+- site / page title
+
+### Changed
+- ESLint config
+- new folder structure
+- reworked TranslationProvider to AppProvider
+- translations has moved to a separate folder
+  - `i18n.init` call has been moved to new folder
+  - extracted `useTranslation` hook into new folder
+  - `LanguageContext` has been moved to new folder
 
 ## [1.0.1] - 2020-10-21
-### FIXED
+### Fixed
 - content of LICENSE file
 - uses `fs` instead of `fs/promises`
 

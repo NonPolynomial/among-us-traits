@@ -1,8 +1,8 @@
 import { GetServerSideProps, InferGetServerSidePropsType } from 'next';
 import Link from 'next/link';
 import sample from 'lodash/fp/sample';
-import { useTranslation } from '@/components/Translation';
 import { traits } from '@/traits';
+import { useTranslation } from '@/translation/useTranslation';
 
 const Random = ({
   trait,
