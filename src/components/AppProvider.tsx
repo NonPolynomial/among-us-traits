@@ -6,6 +6,7 @@ import i18n from 'i18next';
 import { routes } from '@/routes';
 import { initTranslations } from '@/translation/initTranslations';
 import { LanguageContext } from '@/translation/languageContext';
+import { version } from '../../package.json';
 
 export const AppProvider = ({ children }) => {
   const [lang, setLang] = useState('en');
@@ -55,60 +56,70 @@ export const AppProvider = ({ children }) => {
       <Head>
         <title key="title">{pageTitle}</title>
       </Head>
-      <section className="hero is-dark">
-        <div className="hero-head">
-          <div className="navbar has-background-dark">
-            <div className="navbar-brand">
-              <div className="navbar-item has-text-light title is-4">
-                Among Us - Traits
+      <div className="app">
+        <header className="hero is-dark">
+          <div className="hero-head">
+            <div className="navbar has-background-dark">
+              <div className="navbar-brand">
+                <div className="navbar-item has-text-light title is-4">
+                  Among Us - Traits
+                </div>
               </div>
-            </div>
-            <div className="navbar-menu">
-              <div className="navbar-start">
-                {routes.map(({ path, title }) => (
-                  <Link href={path} key={path}>
-                    <a
-                      className={`navbar-item ${
-                        router.pathname === path ? 'is-active' : ''
-                      }`}
-                    >
-                      {title}
-                    </a>
-                  </Link>
-                ))}
-              </div>
-              <div className="navbar-end">
-                <a
-                  className="navbar-item"
-                  href="https://github.com/NonPolynomial/among-us-traits"
-                  target="_new"
-                >
-                  <span className="icon">
-                    <i className="fab fa-github" />
-                  </span>
-                </a>
-                <a
-                  className="navbar-item"
-                  onClick={() => {
-                    i18n.changeLanguage(i18n.language !== 'en' ? 'en' : 'de');
-                  }}
-                >
-                  <span className="icon">
-                    <i className="fas fa-language" />
-                  </span>
-                </a>
+              <div className="navbar-menu">
+                <div className="navbar-start">
+                  {routes.map(({ path, title }) => (
+                    <Link href={path} key={path}>
+                      <a
+                        className={`navbar-item ${
+                          router.pathname === path ? 'is-active' : ''
+                        }`}
+                      >
+                        {title}
+                      </a>
+                    </Link>
+                  ))}
+                </div>
+                <div className="navbar-end">
+                  <a
+                    className="navbar-item"
+                    href="https://github.com/NonPolynomial/among-us-traits"
+                    target="_new"
+                  >
+                    <span className="icon">
+                      <i className="fab fa-github" />
+                    </span>
+                  </a>
+                  <a
+                    className="navbar-item"
+                    onClick={() => {
+                      i18n.changeLanguage(i18n.language !== 'en' ? 'en' : 'de');
+                    }}
+                  >
+                    <span className="icon">
+                      <i className="fas fa-language" />
+                    </span>
+                  </a>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        <div className="hero-body">
-          <div className="container has-text-centered">
-            <h1 className="title">{t('meta.title')}</h1>
-            <h2 className="subtitle">{t('meta.subtitle')}</h2>
+          <div className="hero-body">
+            <div className="container has-text-centered">
+              <h1 className="title">{t('meta.title')}</h1>
+              <h2 className="subtitle">{t('meta.subtitle')}</h2>
+            </div>
           </div>
-        </div>
-      </section>
-      {children}
+        </header>
+        <main>{children}</main>
+        <footer className="footer">
+          <div className="level">
+            <div className="level-left"></div>
+            <div className="level-right">
+              <div className="level-item">Version: {version}</div>
+            </div>
+          </div>
+        </footer>
+      </div>
     </LanguageContext.Provider>
   );
 };
