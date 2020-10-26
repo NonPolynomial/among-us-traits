@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, ReactNode } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
@@ -8,7 +8,11 @@ import { initTranslations } from '@/translation/initTranslations';
 import { LanguageContext } from '@/translation/languageContext';
 import { version } from '../../package.json';
 
-export const AppProvider = ({ children }) => {
+type Props = {
+  children: ReactNode,
+};
+
+export const AppProvider = ({ children }: Props) => {
   const [lang, setLang] = useState('en');
   const [translator, setTranslator] = useState(null);
   const router = useRouter();
@@ -48,7 +52,7 @@ export const AppProvider = ({ children }) => {
   const t = i18n.getFixedT(lang);
 
   const pageTitle = currentRoute
-    ? `${currentRoute.title} | ${t('meta.title')}`
+    ? `${t(`page.title.${currentRoute.id}`)} | ${t('meta.title')}`
     : t('meta.title');
 
   return (
@@ -67,14 +71,14 @@ export const AppProvider = ({ children }) => {
               </div>
               <div className="navbar-menu">
                 <div className="navbar-start">
-                  {routes.map(({ path, title }) => (
+                  {routes.map(({ id, path }) => (
                     <Link href={path} key={path}>
                       <a
                         className={`navbar-item ${
                           router.pathname === path ? 'is-active' : ''
                         }`}
                       >
-                        {title}
+                        {t(`page.title.${id}`)}
                       </a>
                     </Link>
                   ))}
@@ -91,13 +95,22 @@ export const AppProvider = ({ children }) => {
                   </a>
                   <a
                     className="navbar-item"
+                    role="button"
                     onClick={() => {
                       i18n.changeLanguage(i18n.language !== 'en' ? 'en' : 'de');
+                    }}
+                    onKeyUp={e => {
+                      if (e.key === 'l') {
+                        i18n.changeLanguage(
+                          i18n.language !== 'en' ? 'en' : 'de',
+                        );
+                      }
                     }}
                   >
                     <span className="icon">
                       <i className="fas fa-language" />
                     </span>
+                    <span className="px-1 pb-1">{t('changeLanguage')}</span>
                   </a>
                 </div>
               </div>
@@ -113,9 +126,14 @@ export const AppProvider = ({ children }) => {
         <main>{children}</main>
         <footer className="footer">
           <div className="level">
-            <div className="level-left"></div>
+            <div className="level-left" />
             <div className="level-right">
-              <div className="level-item">Version: {version}</div>
+              <div className="level-item">
+                <div className="tags has-addons">
+                  <span className="tag is-dark">Version</span>
+                  <span className="tag">{version}</span>
+                </div>
+              </div>
             </div>
           </div>
         </footer>

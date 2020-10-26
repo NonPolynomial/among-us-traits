@@ -1,8 +1,8 @@
 import { GetServerSideProps, InferGetServerSidePropsType } from 'next';
-import Link from 'next/link';
 import sample from 'lodash/fp/sample';
-import { traits } from '@/traits';
+import { Trait, traits } from '@/traits';
 import { useTranslation } from '@/translation/useTranslation';
+import HtmlContent from '@/components/HtmlContent';
 
 const Random = ({
   trait,
@@ -22,21 +22,11 @@ InferGetServerSidePropsType<typeof getServerSideProps>) => {
             </div>
             <div className="card-content">
               <div className="section">
-                <div
+                <HtmlContent
                   className="content is-medium"
-                  dangerouslySetInnerHTML={{
-                    __html: t(`traits:${trait}.description`),
-                  }}
+                  html={t(`traits:${trait}.description`)}
                 />
               </div>
-            </div>
-            <div className="card-footer">
-              <Link href="/">
-                <a className="card-footer-item">{t('back')}</a>
-              </Link>
-              <Link href="/random">
-                <a className="card-footer-item">{t('newTrait')}</a>
-              </Link>
             </div>
           </div>
         </div>
@@ -49,7 +39,9 @@ export const getServerSideProps: GetServerSideProps<{
   trait: string,
 }> = async () => {
   const trait = sample(
-    traits.filter(({ deprecated }) => !deprecated).map(({ id }) => id),
+    traits
+      .filter((t): t is Trait<'weighted'> => !('deprecated' in t))
+      .map(({ id }) => id),
   );
 
   return {

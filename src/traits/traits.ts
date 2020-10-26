@@ -1,21 +1,10 @@
-type Translation = {
-  title: string,
-  description: string,
-};
+import { Trait } from "./types";
 
-type Trait = {
-  id: string,
-  deprecated?: boolean,
-  translations: {
-    en: Translation,
-    [key: string]: Translation,
-  },
-};
-
-export const traits: Trait[] = [
+export const traits: Trait<'weighted' | 'deprecated'>[] = [
   // ! Please add traits in alphabetical order !
   {
     id: 'amnesia',
+    weight: 40,
     translations: {
       en: {
         title: 'Amnesia',
@@ -37,6 +26,7 @@ export const traits: Trait[] = [
   },
   {
     id: 'blindbat',
+    weight: 80,
     translations: {
       en: {
         title: 'Blind like a Bat',
@@ -54,6 +44,7 @@ export const traits: Trait[] = [
   },
   {
     id: 'blur',
+    weight: 60,
     translations: {
       en: {
         title: 'Blurred',
@@ -78,7 +69,8 @@ export const traits: Trait[] = [
     },
   },
   {
-    id: 'button',
+    id: 'buzzer',
+    weight: 80,
     translations: {
       en: {
         title: 'Buzzer Lover',
@@ -96,6 +88,7 @@ export const traits: Trait[] = [
   },
   {
     id: 'cleaning-staff',
+    weight: 130,
     translations: {
       en: {
         title: 'Cleaning Staff',
@@ -121,6 +114,7 @@ export const traits: Trait[] = [
   },
   {
     id: 'conspiracy',
+    weight: 150,
     translations: {
       en: {
         title: 'Conspiracy Theorist',
@@ -156,6 +150,7 @@ export const traits: Trait[] = [
   },
   {
     id: 'curious',
+    weight: 140,
     translations: {
       en: {
         title: 'Curious',
@@ -177,6 +172,7 @@ export const traits: Trait[] = [
   },
   {
     id: 'detective',
+    weight: 90,
     translations: {
       en: {
         title: 'Detective',
@@ -208,6 +204,7 @@ export const traits: Trait[] = [
   },
   {
     id: 'diplomacy',
+    weight: 120,
     translations: {
       en: {
         title: 'Diplomacy',
@@ -227,6 +224,7 @@ export const traits: Trait[] = [
   },
   {
     id: 'dystychiphobia',
+    weight: 90,
     translations: {
       en: {
         title: 'Dystychiphobia',
@@ -262,6 +260,7 @@ export const traits: Trait[] = [
   },
   {
     id: 'envy',
+    weight: 140,
     translations: {
       en: {
         title: 'Envy',
@@ -283,6 +282,7 @@ export const traits: Trait[] = [
   },
   {
     id: 'easily shocked',
+    weight: 120,
     translations: {
       en: {
         title: 'Easily Shocked',
@@ -314,6 +314,7 @@ export const traits: Trait[] = [
   },
   {
     id: 'gluttony',
+    weight: 140,
     translations: {
       en: {
         title: 'Gluttony',
@@ -335,6 +336,7 @@ export const traits: Trait[] = [
   },
   {
     id: 'janitor',
+    weight: 130,
     translations: {
       en: {
         title: 'Janitor',
@@ -356,6 +358,7 @@ export const traits: Trait[] = [
   },
   {
     id: 'liar',
+    weight: 110,
     translations: {
       en: {
         title: 'Liar',
@@ -381,6 +384,7 @@ export const traits: Trait[] = [
   },
   {
     id: 'lust',
+    weight: 120,
     translations: {
       en: {
         title: 'Lust',
@@ -404,6 +408,7 @@ export const traits: Trait[] = [
   },
   {
     id: 'maintenance',
+    weight: 130,
     translations: {
       en: {
         title: 'Maintenance Team',
@@ -479,6 +484,7 @@ export const traits: Trait[] = [
   },
   {
     id: 'nope',
+    weight: 80,
     translations: {
       en: {
         title: 'Nope!',
@@ -501,6 +507,7 @@ export const traits: Trait[] = [
   },
   {
     id: 'notrait',
+    weight: 30,
     translations: {
       en: {
         title: 'No trait',
@@ -514,6 +521,7 @@ export const traits: Trait[] = [
   },
   {
     id: 'nurse',
+    weight: 130,
     translations: {
       en: {
         title: 'Nurse',
@@ -532,6 +540,7 @@ export const traits: Trait[] = [
   },
   {
     id: 'oldschool',
+    weight: 120,
     translations: {
       en: {
         title: 'Oldschool',
@@ -559,6 +568,7 @@ export const traits: Trait[] = [
   },
   {
     id: 'paranoia',
+    weight: 80,
     translations: {
       en: {
         title: 'Paranoia',
@@ -584,6 +594,7 @@ export const traits: Trait[] = [
   },
   {
     id: 'poltergeist',
+    weight: 140,
     translations: {
       en: {
         title: 'Poltergeist',
@@ -601,6 +612,7 @@ export const traits: Trait[] = [
   },
   {
     id: 'pride',
+    weight: 110,
     translations: {
       en: {
         title: 'Pride',
@@ -646,6 +658,7 @@ export const traits: Trait[] = [
   },
   {
     id: 'reflection',
+    weight: 90,
     translations: {
       en: {
         title: 'Reflection',
@@ -677,6 +690,7 @@ export const traits: Trait[] = [
   },
   {
     id: 'sadist',
+    weight: 90,
     translations: {
       en: {
         title: 'Sadist',
@@ -698,6 +712,7 @@ export const traits: Trait[] = [
   },
   {
     id: 'security',
+    weight: 130,
     translations: {
       en: {
         title: 'Security Guard',
@@ -729,6 +744,7 @@ export const traits: Trait[] = [
   },
   {
     id: 'sherlock',
+    weight: 150,
     translations: {
       en: {
         title: 'Sherlock',
@@ -756,6 +772,7 @@ export const traits: Trait[] = [
   },
   {
     id: 'true-poet',
+    weight: 120,
     translations: {
       en: {
         title: 'True Poet',
@@ -769,6 +786,7 @@ export const traits: Trait[] = [
   },
   {
     id: 'walky-talky',
+    weight: 150,
     translations: {
       en: {
         title: 'Walky-talky',
@@ -782,6 +800,7 @@ export const traits: Trait[] = [
   },
   {
     id: 'workaholic',
+    weight: 90,
     translations: {
       en: {
         title: 'Workaholic',
@@ -805,6 +824,7 @@ export const traits: Trait[] = [
   },
   {
     id: 'yes',
+    weight: 80,
     translations: {
       en: {
         title: 'YAS!',

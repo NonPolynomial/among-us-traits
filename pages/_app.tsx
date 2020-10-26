@@ -1,7 +1,17 @@
 import '@/styles/main.scss';
+import { ComponentType } from 'react';
 import { AppProvider } from '@/components/AppProvider';
 
-const App = ({ Component, pageProps }) => (
+type Props<
+  P = {
+    [key: string]: unknown,
+  },
+> = {
+  Component: ComponentType,
+  pageProps: P,
+};
+
+const App = ({ Component, pageProps }: Props) => (
   <AppProvider>
     <Component {...pageProps} />
   </AppProvider>

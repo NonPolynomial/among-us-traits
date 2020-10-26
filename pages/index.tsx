@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { useTranslation } from '@/translation/useTranslation';
+import HtmlContent from '@/components/HtmlContent';
 
 const Index = () => {
   const t = useTranslation();
@@ -8,17 +9,11 @@ const Index = () => {
     <>
       <div className="section">
         <div className="container box">
-          <div
-            className="content is-medium"
-            dangerouslySetInnerHTML={{ __html: t('content.why') }}
-          />
-          <div
-            className="content is-medium"
-            dangerouslySetInnerHTML={{ __html: t('content.how') }}
-          />
+          <HtmlContent className="content is-medium" html={t('content.why')} />
+          <HtmlContent className="content is-medium" html={t('content.how')} />
           <div className="content has-text-centered">
             <Link href="/random">
-              <button className="button is-dark is-medium">
+              <button type="button" className="button is-dark is-medium">
                 {t('getTrait')}
               </button>
             </Link>

@@ -1,14 +1,15 @@
 type Route = {
+  id: string,
   path: string,
-  title: string,
 };
 
 export const routes: Route[] = [
   {
+    id: 'home',
     path: '/',
-    title: 'Home',
   },
-  { path: '/traits', title: 'Traits' },
-  { path: '/random', title: 'Random' },
-  { path: '/changelog', title: 'Changelog' },
+  { id: 'traits', path: '/traits' },
+  { id: 'random', path: '/random' },
+  // { id: 'weighted', path: '/random/weighted' },
+  { id: 'changelog', path: '/changelog' },
 ];

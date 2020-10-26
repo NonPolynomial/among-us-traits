@@ -7,8 +7,22 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 ### Added
-- layout styling
-- footer
+- layout
+  - Header
+  - Main
+  - Footer
+- `HtmlContent` Component
+- helper for weighted random pick
+  - `getWeightedPartialSums`
+
+### Changed
+- Linting rules
+- improved styling
+- weights for traits (weighted random pick incoming! 🎉)
+- extended `Trait` with Generic
+- `Route` type
+- more obvious label for language switcher
+- improved CHANGELOG
 
 ## [1.2.0] - 2020-20-22
 ### Added

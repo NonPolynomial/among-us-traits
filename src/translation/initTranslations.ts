@@ -17,7 +17,7 @@ export const initTranslations = (lang: string) => {
             getTrait: 'Get started!',
             newTrait: 'New trait',
             back: 'Back',
-            changeLanguage: 'en ↔ de',
+            changeLanguage: '🇪🇳',
             content: {
               why: `<h2>Why?</h2>
                       <p>
@@ -33,6 +33,15 @@ export const initTranslations = (lang: string) => {
                         <br />
                         This trait influences the behavior of the player.
                       </p>`,
+            },
+            page: {
+              title: {
+                home: 'Home',
+                traits: 'Traits',
+                random: 'Random',
+                weighted: 'Weighted',
+                changelog: 'Changelog',
+              },
             },
             meta: {
               title: 'Among Us - Traits',
@@ -54,7 +63,7 @@ export const initTranslations = (lang: string) => {
             getTrait: 'Leg los!',
             newTrait: 'Neuer Trait',
             back: 'Zurück',
-            changeLanguage: 'de ↔ en',
+            changeLanguage: '🇩🇪',
             content: {
               why: `<h2>Warum?</h2>
                 <p>
@@ -70,6 +79,15 @@ export const initTranslations = (lang: string) => {
                   <br />
                   Dieser Trait beeinflusst wie sich der Spieler verhält.
                 </p>`,
+            },
+            page: {
+              title: {
+                home: 'Home',
+                traits: 'Traits',
+                random: 'Random',
+                weighted: 'Gewichtet',
+                changelog: 'Changelog',
+              },
             },
             meta: {
               title: 'Among Us - Traits',
