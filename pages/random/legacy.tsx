@@ -1,5 +1,6 @@
 import { GetServerSideProps, InferGetServerSidePropsType } from 'next';
-import { getWeightedRandomPick, Trait, traits } from '@/traits';
+import sample from 'lodash/fp/sample';
+import { Trait, traits } from '@/traits';
 import { useTranslation } from '@/translation/useTranslation';
 import HtmlContent from '@/components/HtmlContent';
 
@@ -11,6 +12,15 @@ InferGetServerSidePropsType<typeof getServerSideProps>) => {
 
   return (
     <>
+      <div className="section pb-0">
+        <div className="container is-max-desktop">
+          <div className="notification is-danger">
+            <p>
+              {t('legacyTraitPick')}
+            </p>
+          </div>
+        </div>
+      </div>
       <div className="section">
         <div className="container is-max-desktop">
           <div className="card">
@@ -37,13 +47,15 @@ InferGetServerSidePropsType<typeof getServerSideProps>) => {
 export const getServerSideProps: GetServerSideProps<{
   trait: string,
 }> = async () => {
-  const trait = getWeightedRandomPick(
+  const trait = sample(
     traits
-    .filter((t): t is Trait<'weighted'> => !('deprecated' in t)));
-  
+      .filter((t): t is Trait<'weighted'> => !('deprecated' in t))
+      .map(({ id }) => id),
+  );
+
   return {
     props: {
-      trait: trait.id,
+      trait,
     },
   };
 };

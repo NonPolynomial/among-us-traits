@@ -8,8 +8,8 @@ const Changelog = ({
 InferGetStaticPropsType<typeof getStaticProps>) => {
   return (
     <div className="section">
-      <div className="container box">
-        <div className="content">
+      <div className="container box is-max-desktop">
+        <div className="content changelog">
           <pre>{changelog}</pre>
         </div>
       </div>

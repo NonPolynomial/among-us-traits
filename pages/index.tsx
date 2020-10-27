@@ -8,7 +8,7 @@ const Index = () => {
   return (
     <>
       <div className="section">
-        <div className="container box">
+        <div className="container box is-max-desktop">
           <HtmlContent className="content is-medium" html={t('content.why')} />
           <HtmlContent className="content is-medium" html={t('content.how')} />
           <div className="content has-text-centered">

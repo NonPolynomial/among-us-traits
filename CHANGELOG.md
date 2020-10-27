@@ -7,6 +7,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 ### Added
+- weighted random pick! 🎉🎉🎉
 - layout
   - Header
   - Main
@@ -14,15 +15,28 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - `HtmlContent` Component
 - helper for weighted random pick
   - `getWeightedPartialSums`
+  - `getWeightedRandomPick`
+- more responsiveness
+  - mobile menu
+- styling
+  - changelog
+- translations
 
 ### Changed
 - Linting rules
 - improved styling
-- weights for traits (weighted random pick incoming! 🎉)
+  - navbar
+- weights for traits
 - extended `Trait` with Generic
 - `Route` type
 - more obvious label for language switcher
 - improved CHANGELOG
+- routes in `routes.ts`
+  - nesting
+
+### Deprecated
+- old random trait pick
+  - accessible through path `/random/legacy`
 
 ## [1.2.0] - 2020-20-22
 ### Added

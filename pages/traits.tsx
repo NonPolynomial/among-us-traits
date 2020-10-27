@@ -13,27 +13,38 @@ const Traits = ({
   return (
     <>
       <div className="section">
-        <div className="container is-max-widescreen">
+        <div className="container is-max-desktop">
           <div className="columns is-multiline">
             {traits.map((trait) => (
-              <div key={trait.id} className="column is-12 is-6-desktop is-4-widescreen">
+              <div key={trait.id} className="column is-12 is-6-desktop">
                 <div className="card" style={{ height: '100%' }}>
                   <div className="card-header">
                     <div className="card-header-title">
-                      <p className="title">{t(`traits:${trait.id}.title`)}</p>
+                      <p className="title is-size-4 is-size-3-desktop">{t(`traits:${trait.id}.title`)}</p>
                     </div>
                   </div>
                   <div className="card-content">
                     <HtmlContent
-                      className="content px-2 pb-2"
+                      className="content is-size-5-tablet px-2 pb-2"
                       html={t(`traits:${trait.id}.description`)}
                     />
                   </div>
                   <div className="card-footer">
-                    <div className="card-footer-item">
+                    <div className="card-footer-item is-hidden-tablet">
+                      <div className="tags has-addons">
+                        <span className="tag is-dark">
+                          {t('probability')}
+                        </span>
+                        <span className="tag is-primary is-light has-text-weight-bold">
+                          {Number(trait.weight / maxWeight * 100).toFixed(2)}
+                          %
+                        </span>
+                      </div>
+                    </div>
+                    <div className="card-footer-item is-hidden-mobile">
                       <div className="tags has-addons is-medium">
                         <span className="tag is-dark">
-                          <abbr title="probability">prob.</abbr>
+                          <abbr title={t('probability')}>prob.</abbr>
                         </span>
                         <span className="tag is-primary is-light has-text-weight-bold">
                           {Number(trait.weight / maxWeight * 100).toFixed(2)}

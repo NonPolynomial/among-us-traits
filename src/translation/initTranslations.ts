@@ -18,6 +18,9 @@ export const initTranslations = (lang: string) => {
             newTrait: 'New trait',
             back: 'Back',
             changeLanguage: '🇪🇳',
+            probability: 'probability',
+            legacyTraitPick:
+              'This page is outdated and is no longer maintained!',
             content: {
               why: `<h2>Why?</h2>
                       <p>
@@ -39,7 +42,7 @@ export const initTranslations = (lang: string) => {
                 home: 'Home',
                 traits: 'Traits',
                 random: 'Random',
-                weighted: 'Weighted',
+                legacy: 'Random (Legacy)',
                 changelog: 'Changelog',
               },
             },
@@ -64,6 +67,9 @@ export const initTranslations = (lang: string) => {
             newTrait: 'Neuer Trait',
             back: 'Zurück',
             changeLanguage: '🇩🇪',
+            probability: 'Wahrscheinlichkeit',
+            legacyTraitPick:
+              'Diese Seite ist veraltet und wird nicht mehr gepflegt!',
             content: {
               why: `<h2>Warum?</h2>
                 <p>
@@ -85,7 +91,7 @@ export const initTranslations = (lang: string) => {
                 home: 'Home',
                 traits: 'Traits',
                 random: 'Random',
-                weighted: 'Gewichtet',
+                legacy: 'Random (alt)',
                 changelog: 'Changelog',
               },
             },

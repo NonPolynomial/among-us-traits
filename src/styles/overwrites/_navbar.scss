@@ -1,5 +1,33 @@
 .navbar-item {
   button.navbar-item {
-    @extend a
+    @extend a;
+  }
+}
+
+.hero.is-dark {
+  .navbar {
+    @extend .navbar, .is-dark;
+
+    .navbar-brand {
+      .navbar-burger {
+        margin-left: 0;
+        position: absolute;
+        right: 0;
+      }
+    }
+
+    @media (min-width: $desktop) {
+      .navbar-dropdown {
+        .navbar-item {
+          color: $dark !important;
+          cursor: pointer;
+          
+          &:hover,
+          &.is-active {
+            background-color: $grey-lighter !important;
+          }
+        }
+      }
+    }
   }
 }
